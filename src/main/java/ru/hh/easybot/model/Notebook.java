@@ -1,7 +1,16 @@
 package ru.hh.easybot.model;
 
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name = "test")
+@Data
 public class Notebook extends Device {
+    @Column(name = "_additional", nullable = false)
     private Size size;
 
     public Notebook(Size size) {

@@ -8,8 +8,5 @@ import ru.hh.easybot.model.Computer;
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
-
-        Computer c = new Computer(Computer.FormFactor.MONOBLOCK);
-
     }
 }

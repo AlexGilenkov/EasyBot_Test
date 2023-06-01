@@ -1,7 +1,16 @@
 package ru.hh.easybot.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name = "test")
+@Data
 public class HDD extends Device{
-    private float volume;
+    @Column(name = "_additional", nullable = false)
+    private Float volume;
 
     public HDD(float volume) {
         super();
@@ -15,6 +24,6 @@ public class HDD extends Device{
 
     @Override
     public void fromAdditional(String s) {
-        this.volume = Float.valueOf(s).floatValue();
+        this.volume = Float.valueOf(s);
     }
 }
