@@ -1,9 +1,6 @@
 package ru.hh.easybot.model;
 
 
-import org.springframework.context.annotation.Bean;
-
-
 public class Computer extends Device {
     private FormFactor formFactor;
 
@@ -21,8 +18,12 @@ public class Computer extends Device {
     }
 
     @Override
-    public String additional() {
+    public String toAdditional() {
         return formFactor.toString();
+    }
+
+    public void fromAdditional(String str){
+        this.formFactor = FormFactor.valueOf(str);
     }
 
     public enum FormFactor {DESKTOP, NETTOP, MONOBLOCK}

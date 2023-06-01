@@ -9,7 +9,12 @@ public class HDD extends Device{
     }
 
     @Override
-    public String additional() {
+    public String toAdditional() {
         return String.valueOf(volume);
+    }
+
+    @Override
+    public void fromAdditional(String s) {
+        this.volume = Float.valueOf(s).floatValue();
     }
 }

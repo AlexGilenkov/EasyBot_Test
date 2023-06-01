@@ -10,8 +10,13 @@ public class Notebook extends Device {
     }
 
     @Override
-    public String additional() {
+    public String toAdditional() {
         return size.toString();
+    }
+
+    @Override
+    public void fromAdditional(String s) {
+        this.size = Size.valueOf(s);
     }
 
     public enum Size {D13, D14, D15, D17}

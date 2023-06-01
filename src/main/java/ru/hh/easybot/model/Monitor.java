@@ -9,7 +9,12 @@ public class Monitor extends Device{
     }
 
     @Override
-    public String additional() {
+    public String toAdditional() {
         return String.valueOf(diag);
+    }
+
+    @Override
+    public void fromAdditional(String s) {
+        this.diag = Float.valueOf(s).floatValue();
     }
 }

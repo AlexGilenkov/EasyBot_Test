@@ -6,7 +6,8 @@ public abstract class Device {
     private float price;
     private int count;
 
-    public abstract String additional();
+    public abstract String toAdditional();
+    public abstract void fromAdditional(String s);
     public String getSerialNumber() {
         return serialNumber;
     }
